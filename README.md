@@ -1,6 +1,4 @@
-Du hast recht — mein Fehler. Hier komplett zum Kopieren, diesmal korrekt mit **Speicherung** und **Gelernt**:
 
-````md
 # Angular Todo-Liste
 
 Eine einfache Todo-Liste, die ich zum Lernen von Angular erstellt habe.
