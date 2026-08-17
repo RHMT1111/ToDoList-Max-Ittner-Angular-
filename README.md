@@ -1,3 +1,6 @@
+Du hast recht — mein Fehler. Hier komplett zum Kopieren, diesmal korrekt mit **Speicherung** und **Gelernt**:
+
+````md
 # Angular Todo-Liste
 
 Eine einfache Todo-Liste, die ich zum Lernen von Angular erstellt habe.
@@ -30,6 +33,7 @@ src/app/
 ├── app.css            # Styling der Haupt-Komponente
 ├── list-item/         # Child-Komponente für ein einzelnes Todo
 └── pipes/             # Eigene Pipes zur Anzeige von Daten
+```
 
 ## Speicherung mit localStorage
 
@@ -40,20 +44,59 @@ Die Todo-Liste wird im Browser gespeichert. Dadurch bleiben die Todos auch nach 
 - `JSON.stringify(...)` wandelt die Todo-Liste in speicherbaren JSON-Text um.
 - `JSON.parse(...)` wandelt den JSON-Text wieder in eine JavaScript-/TypeScript-Liste um.
 
-Hinweis: Die Daten liegen nur im jeweiligen Browser auf dem jeweiligen Gerät.
+Hinweis: Die Daten liegen nur im jeweiligen Browser auf dem jeweiligen Gerät und werden nicht im Backend gespeichert.
+
+## Starten des Projekts
+
+1. Repository klonen:
+
+```bash
+git clone <DEINE-REPOSITORY-URL>
+```
+
+2. In den Projektordner wechseln:
+
+```bash
+cd <PROJEKTNAME>
+```
+
+3. Benötigte Pakete installieren:
+
+```bash
+npm install
+```
+
+4. Angular-Anwendung starten:
+
+```bash
+ng serve
+```
+
+5. Im Browser öffnen:
+
+```text
+http://localhost:4200
+```
 
 ## Gelernt
 
 - Angular-Komponenten mit `@Component`
-- Daten und Methoden in `app.ts`
-- Darstellung in `app.html`
-- Styling mit `app.css`
+- Aufbau einer Angular-Anwendung mit `app.ts`, `app.html` und `app.css`
+- Daten und Methoden in TypeScript
+- Darstellung von Daten mit `{{ variable }}`
 - Schleifen mit `@for`
 - Bedingungen mit `@if` und `@else`
 - Click-Events mit `(click)`
-- Datenbindung mit `{{ }}` und `[property]`
-- Parent-Child-Kommunikation mit `@Input()` und `@Output()`
-- Ereignisse mit `EventEmitter`
-- Listen bearbeiten mit `push()` und `splice()`
+- Property Binding, z. B. `[placeholder]`
+- Template-Referenzvariablen wie `#todoEingabe`
+- Neue Todos mit `push()` zur Liste hinzufügen
+- Todos mit `splice()` aus der Liste löschen
+- Den Status eines Todos über `done` ändern
+- Parent- und Child-Komponenten
+- Datenübergabe mit `@Input()`
+- Ereignisse mit `@Output()` und `EventEmitter`
+- `$index` und `$event`
+- Pipes zur Veränderung der Darstellung
 - Daten lokal im Browser mit `localStorage` speichern und laden
 - JSON mit `JSON.stringify()` speichern und mit `JSON.parse()` wieder lesen
+````
