@@ -1,0 +1,21 @@
+<div class="to-do-app">
+<h1>Meine Todo-Liste</h1>
+
+<ul>
+  <!-- Verbindung zur anderen Komponente(listItem) (Übergabe)-->
+  <!--Child Komponente = Parent Variablen und Funktionen-->
+  @for (todoItem of allTodoItems; track $index) {
+   <app-list-item [todo]="todoItem" [index]="$index" (deleteItem)="deleteTodo($event)" ></app-list-item>
+  }
+</ul>
+
+
+  <!-- # todoEingabe gibt dem Feld einen Namen, damit du es ansprechen kannst -->
+  <!-- es ist keine Variable aus app.ts und exestiert nur in app.html! -->
+
+<div>
+  <input #todoEingabe type="text" [placeholder]="inputPlaceholderText">
+  <button (click)="hinzufuegen(todoEingabe.value)">Hinzufügen</button>
+</div>
+</div>
+{{allTodoItems | json}}

@@ -1,0 +1,20 @@
+
+<li (click) = "todo.done = !todo.done">
+  {{ todo.description | customPipe }}
+<!--{{10000000 | number: '1.0-0'}}-->
+  @if (todo.done) {
+    – erledigt
+  } @else {
+    – offen
+  }
+</li>
+
+<!-- Delete Button wird hier angelegt, der Emitter schreit raus, es wurde geklickt! -->
+<button (click)="deleteItem.emit(index)" type="button" >löschen{{index}}</button>
+
+
+
+
+
+
+
